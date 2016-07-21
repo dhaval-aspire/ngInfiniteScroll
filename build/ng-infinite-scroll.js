@@ -18,7 +18,7 @@ mod.directive('infiniteScroll', [
       },
       link: function(scope, elem, attrs) {
         var changeContainer, checkInterval, checkWhenEnabled, container, handleInfiniteScrollContainer, handleInfiniteScrollDisabled, handleInfiniteScrollDistance, handleInfiniteScrollUseDocumentBottom, handler, height, immediateCheck, offsetTop, pageYOffset, scrollDistance, scrollEnabled, throttle, unregisterEventListener, useDocumentBottom, windowElement;
-        windowElement = angular.element($window);
+        windowElement = angular.element(document.body);
         scrollDistance = null;
         scrollEnabled = null;
         checkWhenEnabled = null;
