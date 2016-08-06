@@ -8,7 +8,7 @@ mod.directive('infiniteScroll', [
     return {
       link: function(scope, elem, attrs) {
         var checkWhenEnabled, handler, scrollDistance, scrollEnabled;
-        $window = angular.element(document.body);
+        $window = angular.element('main#sb-site.container:not(.fixed-footer):not(.fixed-header)');
         scrollDistance = 0;
         if (attrs.infiniteScrollDistance != null) {
           scope.$watch(attrs.infiniteScrollDistance, function(value) {
